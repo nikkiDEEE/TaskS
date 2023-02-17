@@ -16,7 +16,7 @@ public class DataManager {
     private File dataFile;
 
     public DataManager(String fileName) {
-        dataFile = new File(fileName);
+        dataFile = new File(fileName); // creating File object, passing .txt data file
     }
 
     public File getDataFile() {
@@ -57,7 +57,7 @@ public class DataManager {
             ArrayList<String> dataItems = readFile();
             taskList = parse(dataItems);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File access problem.");
         }
         return taskList;
     }
