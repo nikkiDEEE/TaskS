@@ -12,7 +12,7 @@ public class Main {
     private TaskNameComparator taskNameComparator;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Task (stream) manager\n");
+        System.out.println("Welcome to Task Manager\n");
         DataManager dm = new DataManager("./data/data.txt");
         ArrayList<Task> tasksData = dm.loadData();
 
