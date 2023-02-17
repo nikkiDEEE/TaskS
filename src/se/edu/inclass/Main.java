@@ -36,6 +36,15 @@ public class Main {
     }
 
     public static void printData(ArrayList<Task> tasksData) {
+    private static int countDeadlinesUsingStream(ArrayList<Task> tasks) {
+        int count = (int)tasks.stream()
+                .filter(task -> task instanceof Deadline)
+                .count();
+        return count;
+    }
+
+    public static void printDataUsingIterations(ArrayList<Task> tasksData) {
+        System.out.println("Printing data using iterations.");
         for (Task t : tasksData) {
             System.out.println(t);
         }
